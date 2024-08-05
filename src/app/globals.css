@@ -2,32 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.nav-button:hover {
+  border-bottom: 7px #d8ddde solid;
+  padding-top: 7px;
+}
+
+.gradient {
+  color: #d8ddde;
+  -webkit-background-clip: text;
+  background-clip: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #ffcc00, #ff6600);
+  background-size: 340px 100%;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 677px) {
+  .gradient {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #ffcc00, #ff6600);
+    background-size: 676px 100%;
+    background-repeat: no-repeat;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.full-vh {
+  height: calc(100vh - 4rem);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.products-grid-parent {
+  display: grid;
+  width: 85vw;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas:
+    "a a a"
+    "b b b"
+    "c c c";
+}
+
+@media screen and (min-width: 768px) {
+  .products-grid-parent {
+    display: grid;
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(4, 150px);
+    grid-template-areas:
+      "a b b"
+      "a b b"
+      "a c c"
+      "a c c";
   }
+
+  .writing-vertical {
+    writing-mode: vertical-rl;
+  }
+}
+
+.product-grid-1 {
+  grid-area: a;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.product-grid-2 {
+  grid-area: b;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+.product-grid-3 {
+  grid-area: c;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.transparent-hover {
+  background-color: rgba(221, 110, 66, 0);
+  color: transparent;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.transparent-hover:hover {
+  background-color: rgba(221, 110, 66, 0.5);
+  color: #d8ddde;
+  cursor: pointer;
+}
+
+.transparent-hover:hover h1 {
+  display: inline;
 }
