@@ -4,8 +4,8 @@ function AboutUs() {
   return (
     <div className="h-auto min-h-screen w-screen bg-[#f3b700] flex justify-center items-center flex-col">
       <h1 className="text-6xl text-[#dd6e42] px-16 py-8 font-bold">About Us</h1>
-      <p className="text-2xl text-[#fbf7ec] px-16 pb-16">
-        {`At Virtual Escapes <span>™</span> , we bring the wonders of the world to
+      <div className="text-2xl text-[#fbf7ec] px-16 pb-16">
+        {/* At Virtual Escapes <span>™</span> , we bring the wonders of the world to */}
         your fingertips. Through our cutting-edge VR technology, you can
         experience breathtaking landscapes, vibrant cities, and serene retreats
         without leaving home. Whether you are craving a peaceful beach, a
@@ -17,8 +17,8 @@ function AboutUs() {
         true sense of escape and adventure. Discover the joy of travel from your
         own private space. With Virtual Escapes, your next adventure is just a
         strap away. Embrace the future of travel and explore the extraordinary.
-        Welcome to Virtual Escapes<span>™</span>.`}
-      </p>
+        {/* Welcome to Virtual Escapes<span>™</span>. */}
+      </div>
     </div>
   );
 }
