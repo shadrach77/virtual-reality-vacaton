@@ -27,7 +27,7 @@ export default function Navbar() {
           className="h-[60px] w-[60px] mr-[10px] cursor-pointer md:hidden"
           onClick={() => setSubMenu(!subMenu)}
         ></Image>
-        <div className="hidden bg-[#427aa1] h-full w-1/2 min-w-[500px] max-w-[600px] md:flex flex-row">
+        <div className="hidden bg-[#427aa1] h-full w-1/2 min-w-[550px] max-w-[600px] md:flex flex-row">
           <Link
             href={"/"}
             className="h-full bg-[#427aa1] flex justify-center items-center w-1/4 nav-button"
@@ -44,7 +44,7 @@ export default function Navbar() {
             href={"/virtual-destinations"}
             className="h-full bg-[#427aa1] flex justify-center items-center w-1/4 nav-button"
           >
-            Virtual Destinations
+            Destinations
           </Link>
           <Link
             href={"/our-team"}
