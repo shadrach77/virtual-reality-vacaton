@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-[#427aa1] h-16 w-full flex justify-between items-center sticky top-0">
+      <nav className="bg-[#427aa1] h-16 w-full flex justify-between items-center sticky top-0 z-20">
         <Image
           src={Logo}
           alt="Pixel Escapes Logo"
@@ -56,31 +56,25 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`bg-gray-600 full-vh w-1/3 absolute right-0 z-20 md:hidden ${
+        className={`h-auto w-screen absolute z-10 md:hidden top-0 ${
           subMenu
-            ? "translate-x-0 transition duration-300"
-            : "translate-x-full transition duration-300"
+            ? "nav-submenu-popup"
+            : "translate-y-[-100%] transition duration-300"
         }`}
       >
-        <Link href="/" className="h-12 bg-slate-300 flex items-center px-4">
+        <Link href="/" className="nav-submenu-popup-element">
           Home
         </Link>
-        <Link
-          href={"/about-us"}
-          className="h-12 bg-slate-200 flex items-center px-4"
-        >
+        <Link href={"/about-us"} className="nav-submenu-popup-element">
           About Us
         </Link>
         <Link
           href={"/virtual-destinations"}
-          className="h-12 bg-slate-300 flex items-center px-4"
+          className="nav-submenu-popup-element"
         >
           Virtual Destinations
         </Link>
-        <Link
-          href={"/our-team"}
-          className="h-12 bg-slate-200 flex items-center px-4"
-        >
+        <Link href={"/our-team"} className="nav-submenu-popup-element">
           Our Team
         </Link>
       </div>
